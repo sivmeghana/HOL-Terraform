@@ -27,7 +27,7 @@ variable "admin_username" {
 
 variable "admin_password" {
   description = "vmpassword"
-  default     = "vmadmin123"
+  default     = "vmadmin123*"
 }
 
 resource "azurerm_resource_group" "rg" {
