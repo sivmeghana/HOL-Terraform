@@ -7,7 +7,7 @@ provider "azurerm" {
 
 variable "resource_group" {
   description = "The name of the resource group in which to create the virtual network."
-  value       = "rg_hol_terraform"
+  default     = "rg_hol_terraform"
 }
 
 variable "project_name" {
@@ -27,6 +27,7 @@ variable "admin_username" {
 
 variable "admin_password" {
   description = "vmpassword"
+  default     = "vmadmin123"
 }
 
 provider "azurerm" {
