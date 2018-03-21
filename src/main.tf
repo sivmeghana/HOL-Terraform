@@ -30,13 +30,6 @@ variable "admin_password" {
   default     = "vmadmin123"
 }
 
-provider "azurerm" {
-  subscription_id = "71499d73-f968-47ad-9578-96dbb2b96de1"
-  client_id       = "b37561f6-5f97-4159-ac96-dc0d87719737"
-  client_secret   = "PCpQUeJcqgvGRuNRX6ItJaCtxc89l93iQLkGTtOp2WE="
-  tenant_id       = "2e3a33f9-66b1-4e2a-8b95-74102ad857c2"
-}
-
 resource "azurerm_resource_group" "rg" {
   name     = "${var.resource_group}"
   location = "${var.location}"
