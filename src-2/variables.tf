@@ -1,5 +1,6 @@
 variable "resource_group" {
   description = "The name of the resource group in which to create the virtual network."
+  default     = "rg_hol_terraform"
 }
 
 variable "project_name" {
@@ -9,7 +10,7 @@ variable "project_name" {
 
 variable "location" {
   description = "The location/region where the virtual network is created. Changing this forces a new resource to be created."
-  default     = "westeurope"
+  default     = "West Europe"
 }
 
 variable "admin_username" {
@@ -19,4 +20,5 @@ variable "admin_username" {
 
 variable "admin_password" {
   description = "vmpassword"
+  default     = "vmadmin123*"
 }
