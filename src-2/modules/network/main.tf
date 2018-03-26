@@ -7,6 +7,8 @@ resource "azurerm_virtual_network" "vnet" {
   tags {
     environment = "Terraform HOL bootcamp"
   }
+
+  //depends_on = ["module.resource-groupe.azurerm_resource_group.rg"]
 }
 
 resource "azurerm_subnet" "subnet" {
@@ -14,4 +16,6 @@ resource "azurerm_subnet" "subnet" {
   virtual_network_name = "${azurerm_virtual_network.vnet.name}"
   resource_group_name  = "${var.resource_group}"
   address_prefix       = "10.0.10.0/24"
+
+  //depends_on = ["module.resource-groupe.azurerm_resource_group.rg"]
 }

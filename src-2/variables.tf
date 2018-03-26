@@ -23,4 +23,5 @@ variable "admin_password" {
   default     = "vmadmin123*"
 }
 
-variable "subnet_id" {}
+//variable "subnet_id" {}
+
