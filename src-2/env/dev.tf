@@ -1,1 +1,3 @@
-resource_group = "holterradev"
+resource_group = "hol-terraform"
+
+location="West Europe"
