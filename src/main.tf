@@ -1,13 +1,21 @@
+
+/************************************************/
+/************ Provider *********************/
+/************************************************/
+
 provider "azurerm" {
-  subscription_id = "1da42ac9-ee3e-4fdb-b294-f7a607f589d5"
-  client_id       = "b37561f6-5f97-4159-ac96-dc0d87719737"
+  subscription_id = "<SUBSCRIPTION ID>"
+  client_id       = "<CLIENT ID / APPLICATION ID>"
   client_secret   = "<YOUR SECRET>"
-  tenant_id       = "2e3a33f9-66b1-4e2a-8b95-74102ad857c2"
+  tenant_id       = "<YOUR TENANT>"
 }
+
+/************************************************/
+/************ Declaration of variables *********************/
+/************************************************/
 
 variable "resource_group" {
   description = "The name of the resource group in which to create the virtual network."
-  default     = "rg_hol_terraform"
 }
 
 variable "project_name" {
@@ -17,7 +25,6 @@ variable "project_name" {
 
 variable "location" {
   description = "The location/region where the virtual network is created. Changing this forces a new resource to be created."
-  default     = "West Europe"
 }
 
 variable "admin_username" {
@@ -29,6 +36,18 @@ variable "admin_password" {
   description = "vmpassword"
   default     = "vmadmin123*"
 }
+
+/************************************************/
+/************ Variables values *********************/
+/************************************************/
+
+resource_group = "hol-terraform"
+
+location="West Europe"
+
+/************************************************/
+/************ Resources Azure *********************/
+/************************************************/
 
 resource "azurerm_resource_group" "rg" {
   name     = "${var.resource_group}"
