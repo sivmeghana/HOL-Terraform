@@ -10,5 +10,5 @@ steps:
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact'
   inputs:
-    PathtoPublish: '$(System.DefaultWorkingDirectory/src-2/
+    PathtoPublish: '$(System.DefaultWorkingDirectory/src-2/'
     ArtifactName: 'drop'
