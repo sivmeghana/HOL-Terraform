@@ -1,3 +1,7 @@
+terraform {
+  backend          "azurerm"        {}
+}
+
 module "resource-groupe" {
   source         = "./modules/rg"
   location       = "${var.location}"
