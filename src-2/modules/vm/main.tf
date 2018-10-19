@@ -19,7 +19,7 @@ resource "azurerm_public_ip" "pip" {
   domain_name_label            = "holterraform"
 
   tags {
-    environment = "Terraform HOL bootcamp"
+    environment = "Terraform HOL"
   }
 }
 
@@ -31,7 +31,7 @@ resource "azurerm_storage_account" "stor" {
   account_replication_type = "LRS"
 
   tags {
-    environment = "Terraform HOL bootcamp"
+    environment = "Terraform HOL"
   }
 }
 
@@ -44,7 +44,7 @@ resource "azurerm_managed_disk" "datadisk" {
   disk_size_gb         = "1023"
 
   tags {
-    environment = "Terraform HOL bootcamp"
+    environment = "Terraform HOL"
   }
 }
 
